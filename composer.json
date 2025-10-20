@@ -1,7 +1,7 @@
 {
     "name": "laravel-ardent/ardent",
-    "description": "Self-validating smart models for Laravel 5's Eloquent ORM",
-    "keywords": ["validation", "laravel", "framework", "eloquent", "database", "sql", "orm", "activerecord", "active record"],
+    "description": "Self-validating smart models for Laravel 5.0's Eloquent ORM",
+    "keywords": ["validation", "laravel", "laravel 5.0", "framework", "eloquent", "database", "sql", "orm", "activerecord", "active record"],
     "type": "library",
     "license": "BSD-3-Clause",
     "authors": [
@@ -20,16 +20,15 @@
         "issues": "https://github.com/laravelbook/ardent/issues"
     },
     "require": {
-        "illuminate/support": "~5.1",
-        "illuminate/database": "~5.1",
-        "illuminate/validation": "~5.1",
-        "illuminate/events": "~5.1",
-        "illuminate/hashing": "~5.1"
+        "illuminate/support": "~5.0",
+        "illuminate/database": "~5.0",
+        "illuminate/validation": "~5.0",
+        "illuminate/events": "~5.0",
+        "illuminate/hashing": "~5.0"
     },
     "autoload": {
         "psr-4": {
             "LaravelArdent\\": "src/"
         }
-    },
-    "minimum-stability": "dev"
+    }
 }
