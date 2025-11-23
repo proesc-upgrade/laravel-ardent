@@ -1,5 +1,5 @@
 {
-    "name": "laravel-ardent/ardent",
+    "name": "laravelbook/ardent",
     "description": "Self-validating smart models for Laravel 6+'s Eloquent ORM",
     "keywords": ["validation", "laravel", "laravel 6", "laravel 7", "laravel 8", "laravel 9", "laravel 10", "framework", "eloquent", "database", "sql", "orm", "activerecord", "active record"],
     "type": "library",
