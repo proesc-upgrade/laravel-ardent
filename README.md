@@ -8,11 +8,11 @@ Ardent
 [![Daily Downloads](https://poser.pugx.org/laravelbook/ardent/d/daily.png)](https://packagist.org/packages/laravelbook/ardent)
 
 
-Self-validating smart models for Laravel Framework 5.0's Eloquent ORM.
+Self-validating smart models for Laravel Framework 6+'s Eloquent ORM.
 
 Based on the Aware bundle for Laravel 3 by Colby Rabideau.
 
-**Note:** This fork has been updated to support Laravel 5.0, as the original package was abandoned and only supported up to Laravel 4.2.
+**Note:** This package has been updated to support Laravel 6.0 and above (including Laravel 7, 8, 9, and 10).
 
 Copyright (C) 2013-2015 [Max Ehsan](http://laravelbook.com/) & [Igor Santos](http://www.igorsantos.com.br)
 
@@ -34,7 +34,7 @@ Add `laravelbook/ardent` as a requirement to `composer.json` (see our latest sta
 
 Update your packages with `composer update` or install with `composer install`.
 
-**For Laravel 5.0 compatibility**, make sure you are using version `~3.0` which has been updated to work with Laravel 5.0 specifically.
+**For Laravel 6+ compatibility**, make sure you are using version `~4.0` which has been updated to work with Laravel 6.0 and above.
 
 ### Usage outside of Laravel (since [1.1](https://github.com/laravelbook/ardent/tree/v1.1.0))
 
@@ -87,13 +87,13 @@ Route::post('register', function() {
             'password_confirmation' => 'required|min:6'
         );
 
-        $validator = Validator::make(Input::all(), $rules);
+        $validator = Validator::make(request()->all(), $rules);
 
         if ($validator->passes()) {
             User::create(array(
-                    'name'     => Input::get('name'),
-                    'email'    => Input::get('email'),
-                    'password' => Hash::make(Input::get('password'))
+                    'name'     => request()->get('name'),
+                    'email'    => request()->get('email'),
+                    'password' => Hash::make(request()->get('password'))
                 ));
 
             return Redirect::to('/')->with('message', 'Thanks for registering!');
@@ -323,9 +323,9 @@ Let's see it action. Consider this snippet of code:
 
 ```php
 $user           = new User;
-$user->name     = Input::get('name');
-$user->email    = Input::get('email');
-$user->password = Hash::make(Input::get('password'));
+$user->name     = request()->get('name');
+$user->email    = request()->get('email');
+$user->password = Hash::make(request()->get('password'));
 $user->save();
 ```
 

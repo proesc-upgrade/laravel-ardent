@@ -1,15 +1,18 @@
 Ardent's Changelog
 ==================
 
-## Laravel 5.0 Compatibility Update
+## Laravel 6+ Compatibility Update
 
 ### Changed
-- Updated all Illuminate package dependencies from `~5.1` to `~5.0` for Laravel 5.0 compatibility
-- Removed `minimum-stability: dev` requirement for better stability
-- Package now fully compatible with Laravel 5.0.x
+- Updated all Illuminate package dependencies from `~5.0` to `^6.0|^7.0|^8.0|^9.0|^10.0` for Laravel 6+ compatibility
+- Replaced deprecated `Input::` facade with `request()` helper function
+- Replaced deprecated `snake_case()` helper with `Str::snake()`
+- Replaced deprecated `camel_case()` helper with `Str::camel()`
+- Added PHP 7.2+ requirement
+- Package now fully compatible with Laravel 6.0, 7.0, 8.0, 9.0, and 10.0
 
 ### Notes
-This version maintains backward compatibility with Laravel 4.2 code patterns while adding support for Laravel 5.0. All features from the original package remain functional.
+This version maintains backward compatibility with Laravel 5.0 code patterns while adding support for Laravel 6+. All features from the original package remain functional.
 
 ---
 
